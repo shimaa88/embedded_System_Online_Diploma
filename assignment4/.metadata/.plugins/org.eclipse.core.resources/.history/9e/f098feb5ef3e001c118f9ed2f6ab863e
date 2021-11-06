@@ -1,0 +1,17 @@
+/*
+ * main.c
+ *
+ *  Created on: Nov 6, 2021
+ *      Author:shimaa
+ */
+
+#include<stdio.h>
+char reversr(char arr[],int s);
+int main()
+{char arr[100];
+printf("Enter a sentence");
+fflsuh(stdout);
+scanf("%s",arr);
+
+	}
+char reversr(char arr[],int s);

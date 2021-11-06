@@ -1,0 +1,29 @@
+/*
+ * main.c
+ *
+ *  Created on: Nov 6, 2021
+ *      Author: shimaa
+ */
+#include<stdio.h>
+int pow(int base,int power);
+int main()
+{int b,p;
+printf("Enter base number:");
+fflush(stdout);
+scanf("%d",&b);
+printf("Enter power number:");
+fflush(stdout);
+scanf("%d",&p);
+printf("%d ^ %d = %d",b,p,pow(b,p));
+
+
+}
+int pow(int base,int power)
+{int sum=1;
+if(power==1)
+	return 1;
+sum*=pow(base,power-1);
+	return(sum*base);
+
+}
+

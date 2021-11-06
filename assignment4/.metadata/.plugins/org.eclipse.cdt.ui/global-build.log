@@ -1,0 +1,12 @@
+13:21:03 **** Incremental Build of configuration Debug for project EX4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:8:5: warning: conflicting types for built-in function 'pow'; expected 'double(double,  double)' [-Wbuiltin-declaration-mismatch]
+    8 | int pow(int base,int power);
+      |     ^~~
+..\main.c:8:1: note: 'pow' is declared in header '<math.h>'
+    7 | #include<stdio.h>
+  +++ |+#include <math.h>
+    8 | int pow(int base,int power);
+gcc -o EX4.exe main.o 
+Info: Nothing to build for EX4
