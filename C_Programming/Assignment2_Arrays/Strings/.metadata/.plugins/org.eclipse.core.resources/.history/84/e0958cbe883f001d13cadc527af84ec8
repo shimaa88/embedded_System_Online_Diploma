@@ -1,0 +1,23 @@
+/*
+ ============================================================================
+ Name        : Ex3.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description :  C program to reverse string , Ansi-style
+ ============================================================================
+ */
+#include <string.h>
+
+#include <stdio.h>
+#define SIZE 50
+int main(void) {
+	char text[SIZE];
+	int i;
+	printf("Enter the string:");/*ask user to enter an string*/
+	fflush(stdout);
+	gets(text);
+	for(i=strlen(text);i>0;i++)
+	{printf(text[i]);}
+	return 0;
+}

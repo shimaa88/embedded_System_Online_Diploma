@@ -1,0 +1,23 @@
+/*
+ ============================================================================
+ Name        : Ex4.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : C programe to check whether a number is positive or negative, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+int main()
+{float num;/*variable to save value */
+printf("Enter a numbe: ");/*ask user to enter the a number*/
+fflush(stdout);
+scanf("%f",&num);/*take the value from user*/
+if(num<0) /*check if the number is negative */
+{printf("%f is negative",num);/*print that the number is negative*/}
+else if(num>0) /*check if the number is positive */
+{printf("%f is positive",num);/*print that the number is positive*/}
+else /*in case number not negative or positive  will be zero*/
+	{printf("You entered %f",num);}/*print that the number is zero*/
+	return 0;}

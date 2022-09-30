@@ -1,0 +1,40 @@
+/*
+ ============================================================================
+ Name        : Ex5.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : C programe to search an element in array, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+
+#define SIZE 50
+int main(void) {
+	int arr[SIZE];
+	int num;/*to save number of elements*/
+	int element;/*the element to be searched*/
+	int i;
+	printf("Enter no of elements : ");
+	fflush(stdout);
+	scanf("%d",&num);/*to take number of elements from user*/
+	for(i=0;i<num;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	printf("Enter the element to be searched : ");
+	fflush(stdout);
+	scanf("%d",&element);
+	for(i=0;i<num;i++)
+	{
+		if(arr[i]==element)
+		{
+			printf("Number found at the location = %d",i);
+			break;
+		}
+
+	}
+
+	return 0;
+}

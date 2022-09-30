@@ -1,0 +1,36 @@
+/*
+ ============================================================================
+ Name        : Ex8.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description :  simple Calculator, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+
+int main(void) {
+	char op;/*to take operator*/
+	float num1,num2;/*to save values*/
+	printf("Enter operator either + or - or divide or *");/*user will enter the operator*/
+	fflush(stdout);
+	scanf("%c",&op);/*to take operator from user*/
+	printf("Enter two operands:");/*ask user for operands*/
+	fflush(stdout);
+	scanf("%f %f",&num1,&num2);/*user will enter the operands*/
+	switch(op)
+	{
+	case '+':printf("%f %c %f = %f",num1,op,num2,num1+num2);/*print the summation*/
+	break;
+	case'-':printf("%f %c %f = %f",num1,op,num2,num1-num2);/*print the subtraction*/
+	break;
+	case '*':printf("%f %c %f = %f",num1,op,num2,num1*num2);/*print the product*/
+	break;
+	case '/':if(num2!=0){printf("%f %c %f = %f",num1,op,num2,num1/num2);/*print the division*/
+	break;}
+	else {printf("can't divide on number2 because it is 0 ");break;}
+	}
+
+	return 0;
+}

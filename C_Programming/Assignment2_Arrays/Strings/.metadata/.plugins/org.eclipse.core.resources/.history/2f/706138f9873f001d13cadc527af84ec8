@@ -1,0 +1,28 @@
+/*
+ ============================================================================
+ Name        : Ex2.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description :  C programe to find length of a string, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#define SIZE 50
+int main(void) {
+	char string[SIZE];
+	char count=0;/*to save length of string*/
+	printf("Enter a string:");/*ask user to enter a string*/
+	fflush(stdout);
+	gets(string);
+	while(string[count]!='\0')
+	{
+		count++;
+	}
+	if(count==0)
+	{printf("string is empty");}
+	else
+	{printf("Length of string : %d",count+1);}
+	return 0;
+}

@@ -1,0 +1,39 @@
+/*
+ ============================================================================
+ Name        : Ex1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : C program to find sum of two matrix of  2x2 , Ansi-style
+ ===========================================================*=================
+ */
+#include <stdio.h>
+int main(void) {
+	float matrix1[2][2];/*array to save elements of first matrix*/
+	float matrix2[2][2];/*array to save elements of second matrix*/
+	int i,j;/*iterators of for loop*/
+	printf("Enter the elements of 1st matrix\n");/*ask user to enter elements f matrix*/
+	fflush(stdout);
+	/*elements of first matrix*/
+	for(i=0;i<2;i++)
+	{for(j=0;j<2;j++)
+	{   printf("Enter a%d%d : ",i,j);/*ask user to enter the element of index i and j*/
+		fflush(stdout);
+		scanf("%f",&matrix1[i][j]);}}
+	printf("Enter the elements of 2nd matrix\n");/*ask user to enter elements f matrix*/
+	fflush(stdout);
+	/*elements of second matrix*/
+	for(i=0;i<2;i++)
+	{for(j=0;j<2;j++)
+	{	printf("Enter b%d%d : ",i+1,j+1);/*ask user to enter the element of index i and j*/
+		fflush(stdout);
+		scanf("%f",&matrix2[i][j]);}}
+	/*to print summation of two matrix*/
+	printf("Sum of Matrix\n");
+	fflush(stdout);
+	for(i=0;i<2;i++)
+	{for(j=0;j<2;j++)
+	{ printf("%.2f\t\t",matrix1[i][j]+matrix2[i][j]);
+	  fflush(stdout);
+	}printf("\n"); fflush(stdout);}
+	return 0;}

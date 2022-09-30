@@ -1,0 +1,48 @@
+/*
+ ============================================================================
+ Name        : Ex4.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : C programe to insert an elements in array, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#define SIZE 50
+
+int main(void) {
+	int num;/*to save number of element which entered by user*/
+	int element;/*the element to be inserted*/
+	int location;/*the location of the element to be inserted*/
+	int arr1[SIZE],arr2[SIZE];/*array to save values*/
+	int i;/*the iterator of for loop*/
+
+	printf("Enter no of elements");/*ask user to enter number of elements*/
+	fflush(stdout);
+	scanf("%d",&num);
+	/*to take elements from user*/
+	for(i=0;i<num;i++)
+	{scanf("%d",&arr1[i]);}
+	printf("Enter the element to be inserted : ");/*ask user to enter the element*/
+	fflush(stdout);
+	scanf("%d",&element);
+	printf("Enter the location: ");/*ask user to enter the location of the element*/
+	fflush(stdout);
+	scanf("%d",&location);
+	 for(i=0;i<=num;i++)
+	 {if(i==location-1)
+	 {
+		 arr2[i]=element;
+		arr2[i+1]=arr1[i];
+		i++;
+	 }
+	 else arr2[i]=arr1[i];
+
+	 }
+	 /*to print array after the insertion of the element */
+	 for(i=0;i<=num;i++)
+	 {printf("%d\t",arr2[i]);}
+
+	return 0;
+}
