@@ -1,0 +1,40 @@
+/*
+ ============================================================================
+ Name        : Ex1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : C program to store information of a student using structure, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+/*structure defintion*/
+struct Sstudent
+{
+int roll;
+float marks;
+char name[15];
+	};
+
+
+int main(void) {
+	struct Sstudent s;/*make an object of student to save data*/
+	printf("Enter information of students\n");/*ask user to enter the information*/
+	fflush(stdout);
+
+	printf("Enter name: ");
+	fflush(stdout);
+	scanf("%s",s.name);
+	printf("Enter roll number: ");
+	fflush(stdout);
+	scanf("%d",&s.roll);
+	printf("Enter marks: ");
+	fflush(stdout);
+	scanf("%f",&s.marks);
+	printf("Display Information\nname: %s\nRoll: %d\nMarks: %f",s.name,s.roll,s.marks);
+	fflush(stdout);
+
+
+	return 0;
+}

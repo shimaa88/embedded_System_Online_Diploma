@@ -1,0 +1,38 @@
+/*
+ ============================================================================
+ Name        : Ex3.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description :  C programe to add two complex number, Ansi-style
+ ============================================================================
+ */
+struct Scomplex{
+	float real;
+	float imaginary;
+
+};
+struct Scomplex add(struct Scomplex n1,struct Scomplex n2);
+#include <stdio.h>
+
+int main(void) {
+	struct Scomplex num1,num2,result;
+	printf("for 1st complex number\n Enter real and imaginary respectively: ");
+	fflush(stdout);
+	scanf("%f %f",&num1.real,&num1.imaginary);
+	printf("for 2nd complex number\n Enter real and imaginary respectively: ");
+	fflush(stdout);
+	scanf("%f %f",&num2.real,&num2.imaginary);
+	result=add(num1,num1);
+	printf("sum=%f+%fi",result.real,result.imaginary);
+	return 0;
+}
+struct Scomplex add(struct Scomplex n1,struct Scomplex n2)
+{
+	struct Scomplex r;
+	r.real=n1.real+n2.real;
+	r.imaginary=n1.imaginary+n2.imaginary;
+return r;
+
+
+}

@@ -1,0 +1,24 @@
+/*
+ ============================================================================
+ Name        : Ex1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+
+int main(void) {
+	int m=29;/*m is a variable saved 28(is value) in its memory*/
+	int* pm=&m;/*pm is a pointer to integer point to m in the memory(has the address of m in its memory)*/
+	printf("Address of m : %x\nValue of m : %d\n",(unsigned int)&m,m);
+	fflush(stdout);
+	printf("Now ab is assigned with the address of m. \n Address of pointer ab : %x\n Content of pointer ab : %d",pm,*pm);
+	m=34;
+	printf("The value of m assigned to 34 now \n Address of pointer ab : %x\n Content of pointer ab : %d\n",pm,*pm);
+    *pm=7;
+    printf("The pointer varaible ab is assigned with the value 7 now \nAddress of m : %x\nValue of m : %d ",&m,m);
+	return 0;
+}

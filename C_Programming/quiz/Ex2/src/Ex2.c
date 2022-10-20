@@ -1,0 +1,65 @@
+/*
+ ============================================================================
+ Name        : Ex2.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#define SIZE 50
+int main(void) {
+	int arr1[SIZE];
+	int arr2[SIZE];
+	int size1,size2;
+	int i;
+	int size;
+	printf("Enter the size of the first array then the second array");
+	fflush(stdout);
+	scanf("%d %d",&size1,&size2);
+	printf("Enter elements of first array");
+	fflush(stdout);
+	for(i=0;i<size1;i++)
+	{
+		printf("enter a%d :",i+1);
+		fflush(stdout);
+		scanf("%d",&arr1[i]);
+	}
+	printf("Enter elements of second array");
+	fflush(stdout);
+	for(i=0;i<size2;i++)
+	{
+		printf("enter b%d :",i+1);
+		fflush(stdout);
+		scanf("%d",&arr2[i]);
+	}
+
+	size=size1<=size2?size1:size2;
+	for(i=0;i<size;i++)
+	{
+		arr1[i]=arr1[i]+arr2[i];
+		arr2[i]=arr1[i]-arr2[i];
+		arr1[i]=arr1[i]-arr2[i];
+
+	}
+
+		printf(" elements of first array after swapping\n");
+			fflush(stdout);
+			for(i=0;i<size1;i++)
+			{
+				printf("%d\t",arr1[i]);
+				fflush(stdout);
+
+			}
+			printf("elements of second array after swapping\n");
+					fflush(stdout);
+					for(i=0;i<size2;i++)
+					{
+						printf("%d\t",arr2[i]);
+						fflush(stdout);
+
+					}
+	return 0;
+}

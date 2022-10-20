@@ -1,0 +1,27 @@
+/*
+ ============================================================================
+ Name        : Ex1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+int check_Power(int num);
+int main(void) {
+	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	return EXIT_SUCCESS;
+}
+int check_Power(int num)
+{while(num!=1)
+{if(num%3!=0)
+	return 1;
+   num/=3;
+	}
+return 0;
+
+
+}

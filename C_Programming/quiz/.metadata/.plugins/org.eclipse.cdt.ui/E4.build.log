@@ -1,0 +1,13 @@
+03:14:46 **** Incremental Build of configuration Debug for project E4 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\E4.o" "..\\src\\E4.c" 
+..\src\E4.c:14:5: warning: conflicting types for built-in function 'index'; expected 'char *(const char *, int)' [-Wbuiltin-declaration-mismatch]
+   14 | int index(int n[],int s,int num);
+      |     ^~~~~
+..\src\E4.c: In function 'index':
+..\src\E4.c:44:6: error: subscripted value is neither array nor pointer nor vector
+   44 | {if(s[i]==num)
+      |      ^
+
+03:14:46 Build Finished (took 127ms)
+

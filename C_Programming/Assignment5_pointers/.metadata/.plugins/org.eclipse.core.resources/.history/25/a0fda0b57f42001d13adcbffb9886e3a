@@ -1,0 +1,43 @@
+/*
+ ============================================================================
+ Name        : Ex3.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+
+int main(void) {
+	char string[50];
+	char rvstring[50];
+	char*ps=string;
+	char *rv=&rvstring;
+	int i=0;
+	printf("Input a string : ");
+	fflush(stdout);
+	scanf("%s",string);
+	while(*ps!=0)
+	{   ps++;
+		i++;
+	}
+	while(i>=0)
+	{
+
+		*rv=*ps;
+		rv++;
+		ps--;
+		i--;
+
+
+	}
+	printf("Reverse of the string is : %s",*rv);
+
+
+
+
+
+	return 0;
+}
